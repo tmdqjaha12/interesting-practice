@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    "target": "es5" /* 컴파일할 ECMAScript 버전: 'ES3'(기본), 'ES2015', 'ES2016'... */,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ] /* 컴파일 과정에서 사용될 라이브러리 파일 */,
+    "allowJs": true /* Javascript 파일 컴파일 허용 */,
+    // "allowSyntheticDefaultImports": true /* default export가 없는 모듈에서 기본호출 허용 */,
+    "skipLibCheck": true /* 정의파일 타입 확인 건너뛸지 여부 */,
+    "strict": true /* use-strict 엄격타입 활성화 여부 */,
+    "forceConsistentCasingInFileNames": true /* 같은 파일에 대한 일관되지 않은 케이스 참조 허용금지 여부 */,
+    "noEmit": true /* 결과 파일 emit 여부 */,
+    "esModuleInterop": true /* 모든 import의 namespace 생성을 통한 CommonJS 와 ES모듈 간 상호운용 여부 */,
+    "module": "esnext" /* 생성될 모듈 코드: 'none', 'commonjs', 'amd', 'esnext' ... */,
+    "moduleResolution": "node" /* 모듈 분석방법: 'node'(Node.js) or 'classic'(TS) */,
+    "resolveJsonModule": true,
+    "isolatedModules": true /* 각 파일을 별도모듈로 변환 */,
+    "jsx": "preserve" /* JSX 코드생성 설정: 'react', 'react-native' ... */,
+    "incremental": true,
+    "baseUrl": "." /* 절대경로 모듈이 아닌, 모듈이 위치한 기준 디렉토리 */,
+    // "types": ["react-image-annotate"],
+    "paths": {
+      /* baseUrl 기준으로 불러올 모듈의 위치를 재지정하는 엔트리*/
+      "@components/*": ["src/components/*"],
+      "@pages/*": ["src/pages/*"],
+      "@libs/*": ["src/libs/*"],
+      "@md/*": ["src/md/*"],
+      "@styles/*": ["src/styles/*"],
+      "@utils/*": ["src/utils/*"]
+    },
+    "typeRoots": ["./node_modules/@types/", "src/types"],
+    /* 타입정의를 포함할 폴더목록, '/node_modules/@types/' 는 기본 포함됨 */
+    /* node_modules 에 설치된 타입 외, 사용자 설정 타입을 전역에서 사용할 수 있도록 types 디렉토리도 루트로 지정 */
+    "declaration": true /* 'type.d.ts' 파일 생성설정.d.ts,  파일생성을 통해 별도관리하며, 따로 타입 import 없이도 전역에서 사용하기 위함 */
+  },
+  "include": [
+    "global.d.ts",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/pages/_middleware.ts"
+    // "**/*.js"
+  ] /* include: 컴파일에 포함할 디렉토리/파일 경로 */,
+  "exclude": ["node_modules"] /* exclude: 컴파일에 제외할 디렉토리/파일 경로 */
+}
