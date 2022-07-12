@@ -1,4 +1,3 @@
-import Script from "next/Script";
 import { useEffect } from "react";
 // beforeInteractive: 페이지가 인터랙티브하기 전에 로드
 // afterInteractive(default): 페이지가 대화형이 된 직후 로드
